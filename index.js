@@ -94,16 +94,16 @@ class Meal {
 
 class Delivery {
     constructor(mealId, customerId, neighborhoodId) {
-        this.id = deliveryId++;
+        this.id = ++deliveryId;
         this.mealId = mealId 
         this.customerId = customerId 
-        this.neighborhood = neighborhoodId 
+        this.neighborhoodId = neighborhoodId 
     }
 
     setDelivery(delivery) {
         this.deliveryId = delivery.id;
     }
-    
+
     meal() {
         return store.meals.find(function(meal){
             return meal.id === this.mealId;
